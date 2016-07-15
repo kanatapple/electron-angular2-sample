@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "pretty": true
+  },
+  "files": [
+    "../typings/index.d.ts",
+    "../src/main.ts"
+  ]
+}
