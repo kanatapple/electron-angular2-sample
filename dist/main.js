@@ -1,9 +1,17 @@
 'use strict';
-const { app, BrowserWindow } = require('electron');
+const electron = require('electron');
+const { app, BrowserWindow } = electron;
 let win;
 function createWindow() {
-    win = new BrowserWindow({ width: 800, height: 600 });
+    win = new BrowserWindow({
+        width: 800,
+        height: 600,
+        frame: true,
+        transparent: false,
+    });
     win.loadURL(`file://${__dirname}/index.html`);
+    win.setAlwaysOnTop(true);
+    win.setVisibleOnAllWorkspaces(true);
     win.on('closed', () => {
         win = null;
     });

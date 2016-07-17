@@ -3,6 +3,7 @@
   "dependencies": {},
   "globalDependencies": {
     "github-electron": "registry:dt/github-electron#1.2.5+20160624085047",
-    "node": "registry:dt/node#6.0.0+20160709114037"
+    "node": "registry:dt/node#6.0.0+20160709114037",
+    "require": "registry:dt/require#2.1.20+20160316155526"
   }
 }

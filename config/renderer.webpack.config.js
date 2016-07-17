@@ -3,6 +3,12 @@
 const webpack = require('webpack');
 const path = require('path');
 
+let plugins = [];
+
+if ('production' === process.env.NODE_ENV) {
+    plugins[plugins.length] = new webpack.optimize.UglifyJsPlugin();
+}
+
 module.exports = {
     entry: ['./src/renderer/renderer.ts'],
     output: {
@@ -14,8 +20,8 @@ module.exports = {
     resolve: {
         extensions: ['', '.ts', '.js', '.html'],
         alias: {
-            "src": path.resolve(process.cwd(), "src"),
-            "template": path.resolve(process.cwd(), "src/client/template")
+            'renderer': path.resolve(process.cwd(), 'src/renderer'),
+            'template': path.resolve(process.cwd(), 'src/renderer/template')
         }
     },
     module: {
@@ -26,5 +32,6 @@ module.exports = {
     },
     ts: {
         configFileName: './config/renderer.tsconfig.json'
-    }
+    },
+    plugins: plugins
 };
