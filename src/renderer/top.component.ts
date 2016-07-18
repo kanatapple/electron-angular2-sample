@@ -3,7 +3,6 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector: 'top-component',
     template: require('template/top')
 })
 export default class TopComponent {

@@ -7,13 +7,9 @@ import TopComponent from 'renderer/top.component';
 
 @Component({
     selector: 'app',
-    // template: `
-    //     <router-outlet></router-outlet>
-    // `,
-    // directives: [ROUTER_DIRECTIVES],
-    // precompile: [TopComponent]
-    template: `<top-component></top-component>`,
-    directives: [TopComponent]
+    template: '<router-outlet></router-outlet>',
+    directives: [ROUTER_DIRECTIVES],
+    precompile: [TopComponent]
 })
 export default class AppComponent extends OnInit {
     ngOnInit() {
