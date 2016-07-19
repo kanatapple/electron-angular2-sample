@@ -13,7 +13,7 @@ Electron + Angular2(rc.4)
 npm install
 
 # build and start the electron
-npm build:development
+npm run build
 npm start
 ```
 

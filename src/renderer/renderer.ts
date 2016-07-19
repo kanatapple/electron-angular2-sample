@@ -11,10 +11,8 @@ import {HTTP_PROVIDERS} from '@angular/http';
 import {APP_ROUTER_PROVIDERS} from 'renderer/app.routes';
 import AppComponent from 'renderer/app.component';
 
-console.dir((<any>window).process);
-console.log(location.href);
-if (!((<any>window).app && (<any>window).app.env === 'development')) {
-    // enableProdMode();
+if ((<any>window).process.env.NODE_ENV === 'production') {
+    enableProdMode();
 }
 
 bootstrap(AppComponent, [
